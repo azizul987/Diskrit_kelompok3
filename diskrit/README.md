@@ -33,7 +33,7 @@ This project is built using the **Godot Engine** to demonstrate [tulis konsep di
 You can download the latest build (Windows/Mac/Linux) from the link below:
 
 ### 🚀 **[LINK DOWNLOAD DI SINI]**
-*https://www.mediafire.com/file/c8eozem2og2nt46/Pacman.zip/file*
+*(Contoh: https://github.com/username/repo/releases/download/v1.0/game.zip)*
 
 ### 🎮 How to Run (Source Code)
 If you want to run the project from the source code:
@@ -51,7 +51,7 @@ If you want to run the project from the source code:
 
 ## 🛠️ Tech Stack
 
-* **Engine:** Godot Engine 4.x
+* **Engine:** Godot Engine 4.51
 * **Language:** GDScript
 * **Course:** Struktur Diskrit II
 * **Institution:** Universitas Sriwijaya (UNSRI)
