@@ -1,0 +1,140 @@
+[gd_scene load_steps=18 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://cx1wedi52h87b" path="res://scene/main.gd" id="1_4j5ol"]
+[ext_resource type="Texture2D" uid="uid://v56nyq780wpj" path="res://pacmanPack/BigCoin.png" id="1_brvut"]
+[ext_resource type="PackedScene" uid="uid://51qrgxqlgbco" path="res://objek/pacman.tscn" id="2_0ha60"]
+[ext_resource type="PackedScene" uid="uid://wloeeu2fwne7" path="res://Pac_Tes.tscn" id="2_p1hux"]
+[ext_resource type="PackedScene" uid="uid://myf7ejjuhnu4" path="res://objek/tile_map_layer.tscn" id="3_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://fmu47mwe6ns3" path="res://objek/ghost_tes.tscn" id="4_p1hux"]
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Pacman/Fonts/upheavtt.ttf" id="5_0ha60"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xm2m"]
+atlas = ExtResource("1_brvut")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
+atlas = ExtResource("1_brvut")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("1_brvut")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("1_brvut")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("1_brvut")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("1_brvut")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("1_brvut")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("1_brvut")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4c57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xm2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2yge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bvp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mycd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j5ol"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.19554523, 0.19554508, 0.19554508, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("wall_layer")]
+script = ExtResource("1_4j5ol")
+wall_layer = NodePath("wall")
+player_scene = ExtResource("2_p1hux")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4c57u")
+frame_progress = 0.3703821
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2.0000033, 93.99999)
+scale = Vector2(0.99999994, 0.99999994)
+zoom = Vector2(0.53, 0.53)
+
+[node name="Pacman" parent="." instance=ExtResource("2_0ha60")]
+position = Vector2(-180.75, 13)
+scale = Vector2(1.501, 1.501)
+slide_on_ceiling = false
+LEFT_BOUND = -15
+RIGHT_BOUND = 15
+WARP_ROW = 0
+
+[node name="Posisi Awal" type="Node2D" parent="."]
+position = Vector2(-60, 109)
+
+[node name="wall" parent="." instance=ExtResource("3_4j5ol")]
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Ghost_tes" parent="." node_paths=PackedStringArray("wall") instance=ExtResource("4_p1hux")]
+position = Vector2(294, 372)
+wall = NodePath("../wall")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Path Fiinding" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.5
+offset_top = 256.0
+offset_right = -4.5
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_0ha60")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4j5ol")
+text = "Letakan Player"

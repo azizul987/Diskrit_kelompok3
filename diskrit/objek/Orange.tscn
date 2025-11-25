@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://cnqwypfmrlhxa"]
+
+[ext_resource type="Script" uid="uid://kitu0veet0qt" path="res://objek/orange.gd" id="1_3kt4e"]
+[ext_resource type="Texture2D" uid="uid://d4gbnsm5xdijc" path="res://pacmanPack/orangeGhost.png" id="2_3kt4e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7xd3"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqnu1"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnt5n"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ms24"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0ght"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e2p8"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3g05"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkqlb"]
+atlas = ExtResource("2_3kt4e")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mf7c2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7xd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqnu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnt5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ms24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0ght")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e2p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3g05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkqlb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nioir"]
+radius = 7.0
+
+[node name="Orange" type="CharacterBody2D"]
+scale = Vector2(1.6, 1.6)
+script = ExtResource("1_3kt4e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mf7c2")
+autoplay = "default"
+frame_progress = 0.5539446
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nioir")

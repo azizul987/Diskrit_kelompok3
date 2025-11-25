@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgqvakasaonph"]
+
+[ext_resource type="Script" uid="uid://y00o78hw5tll" path="res://objek/pink_ghost.gd" id="1_43sgx"]
+[ext_resource type="Texture2D" uid="uid://igteg0fwsyml" path="res://pacmanPack/redGhost.png" id="1_i4x8p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43sgx"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hebj4"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdecb"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxvm6"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ij6m"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7t4q"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iov3"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkwsy"]
+atlas = ExtResource("1_i4x8p")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mf7c2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43sgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hebj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdecb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxvm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ij6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7t4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iov3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkwsy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nioir"]
+radius = 7.0
+
+[node name="PinkGhost" type="CharacterBody2D"]
+script = ExtResource("1_43sgx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mf7c2")
+autoplay = "default"
+frame_progress = 0.5539446
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nioir")

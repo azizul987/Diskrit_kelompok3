@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://51qrgxqlgbco"]
+
+[ext_resource type="Texture2D" uid="uid://bh35fl0wqe63" path="res://Pacman/Pacman_01.png" id="2_7bb8f"]
+[ext_resource type="Script" uid="uid://dbbfrra4mypu0" path="res://script/pacman.gd" id="2_hf5wl"]
+[ext_resource type="Texture2D" uid="uid://h71ud3s8c8n3" path="res://Pacman/Pacman_02.png" id="3_hwc4f"]
+[ext_resource type="Texture2D" uid="uid://dn5n35q1uw6no" path="res://Pacman/Pacman_03.png" id="4_riore"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xv0j0"]
+radius = 7.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ss3or"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7bb8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hwc4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_riore")
+}],
+"loop": true,
+"name": &"default",
+"speed": 17.0
+}]
+
+[node name="Pacman" type="CharacterBody2D" groups=["pacman", "player"]]
+collision_mask = 255
+script = ExtResource("2_hf5wl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xv0j0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ss3or")
+autoplay = "default"

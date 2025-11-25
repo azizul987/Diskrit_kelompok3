@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://ccsrp0dpljm1k"]
+
+[ext_resource type="Script" uid="uid://ckqvxlbte1qk1" path="res://objek/green.gd" id="1_otxbv"]
+[ext_resource type="Texture2D" uid="uid://dh8rleg4hv1hv" path="res://pacmanPack/greenGhost.png" id="2_nweq4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk0fs"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbbdo"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl34b"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jka1a"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y0fy"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smo5"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl37g"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q526"]
+atlas = ExtResource("2_nweq4")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mf7c2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk0fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbbdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl34b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jka1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y0fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3smo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl37g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q526")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nioir"]
+radius = 7.0
+
+[node name="Green" type="CharacterBody2D"]
+scale = Vector2(1.6, 1.6)
+script = ExtResource("1_otxbv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mf7c2")
+autoplay = "default"
+frame_progress = 0.5539446
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nioir")

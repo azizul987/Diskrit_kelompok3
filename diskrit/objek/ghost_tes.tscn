@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://fmu47mwe6ns3"]
+
+[ext_resource type="Script" uid="uid://vestsnswnmui" path="res://script/ghost_tes.gd" id="1_6vh7i"]
+[ext_resource type="Texture2D" uid="uid://bo8buajm6xgli" path="res://pacmanPack/blueGhost.png" id="2_rdssh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnq2o"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk0gu"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj08c"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x1jr"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuq86"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmoga"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tus06"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xacoo"]
+atlas = ExtResource("2_rdssh")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qd34b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnq2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk0gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nj08c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4x1jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vuq86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmoga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tus06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xacoo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u1ort"]
+radius = 8.235294
+
+[node name="Ghost_tes" type="CharacterBody2D" groups=["ghostti"]]
+scale = Vector2(1.8, 1.8)
+script = ExtResource("1_6vh7i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qd34b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u1ort")

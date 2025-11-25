@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://wloeeu2fwne7"]
+
+[ext_resource type="Texture2D" uid="uid://bh35fl0wqe63" path="res://Pacman/Pacman_01.png" id="1_xe8bo"]
+[ext_resource type="Texture2D" uid="uid://h71ud3s8c8n3" path="res://Pacman/Pacman_02.png" id="2_pbjye"]
+[ext_resource type="Texture2D" uid="uid://dn5n35q1uw6no" path="res://Pacman/Pacman_03.png" id="3_vge5a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8viw8"]
+radius = 6.662225
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_634sk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xe8bo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pbjye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vge5a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="Pac_Tes" type="CharacterBody2D"]
+scale = Vector2(1.501, 1.501)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8viw8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+sprite_frames = SubResource("SpriteFrames_634sk")
+autoplay = "default"
+frame_progress = 0.72567147

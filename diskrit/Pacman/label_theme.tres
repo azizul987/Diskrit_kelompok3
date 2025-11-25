@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d3ega1v72kivh"]
+
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Pacman/Fonts/upheavtt.ttf" id="1_ufue7"]
+
+[resource]
+default_font = ExtResource("1_ufue7")
+default_font_size = 40

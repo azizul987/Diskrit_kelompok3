@@ -1,0 +1,285 @@
+[gd_scene load_steps=20 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://cx1wedi52h87b" path="res://scene/main.gd" id="1_4j5ol"]
+[ext_resource type="Texture2D" uid="uid://v56nyq780wpj" path="res://pacmanPack/BigCoin.png" id="1_brvut"]
+[ext_resource type="PackedScene" uid="uid://wloeeu2fwne7" path="res://Pac_Tes.tscn" id="2_p1hux"]
+[ext_resource type="PackedScene" uid="uid://myf7ejjuhnu4" path="res://objek/tile_map_layer.tscn" id="3_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://fmu47mwe6ns3" path="res://objek/ghost_tes.tscn" id="4_p1hux"]
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Pacman/Fonts/upheavtt.ttf" id="5_0ha60"]
+[ext_resource type="Script" uid="uid://ughrnxsmfetw" path="res://scene/canvas_layer.gd" id="6_of57s"]
+[ext_resource type="Script" uid="uid://cgo402y6b2yf1" path="res://scene/debug.gd" id="7_p1hux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xm2m"]
+atlas = ExtResource("1_brvut")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
+atlas = ExtResource("1_brvut")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("1_brvut")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("1_brvut")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("1_brvut")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("1_brvut")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("1_brvut")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("1_brvut")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4c57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xm2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2yge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bvp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mycd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j5ol"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.19554523, 0.19554508, 0.19554508, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_of57s"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("wall_layer")]
+script = ExtResource("1_4j5ol")
+wall_layer = NodePath("wall")
+player_scene = ExtResource("2_p1hux")
+ghost_scene = ExtResource("4_p1hux")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4c57u")
+frame_progress = 0.3703821
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2.0000036, 147.99998)
+scale = Vector2(0.99999994, 0.99999994)
+zoom = Vector2(0.53, 0.53)
+
+[node name="Posisi Awal" type="Node2D" parent="."]
+position = Vector2(-60, 109)
+
+[node name="wall" parent="." instance=ExtResource("3_4j5ol")]
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("status_label")]
+script = ExtResource("6_of57s")
+status_label = NodePath("Mode")
+
+[node name="Letakan Player" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.5
+offset_top = 213.0
+offset_right = -4.5
+offset_bottom = 237.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_0ha60")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4j5ol")
+text = "Letakan Player"
+
+[node name="Tambah hantu" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 21.5
+offset_top = 213.0
+offset_right = 213.5
+offset_bottom = 237.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_0ha60")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4j5ol")
+text = "Tambah hantu"
+
+[node name="Hapus Hantu" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.5
+offset_top = 258.0
+offset_right = -4.5
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_0ha60")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4j5ol")
+text = "Hapus"
+
+[node name="Hapus Semua" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 21.5
+offset_top = 258.0
+offset_right = 213.5
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_0ha60")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4j5ol")
+text = "Hapus Semua"
+
+[node name="Menu" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.5
+offset_top = -300.0
+offset_right = 99.5
+offset_bottom = -276.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(113, 513)
+theme_override_fonts/font = ExtResource("5_0ha60")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4j5ol")
+text = "Menu"
+
+[node name="Speed" type="HSlider" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_top = 468.0
+offset_right = 72.0
+offset_bottom = 499.0
+grow_horizontal = 2
+max_value = 2.0
+step = 0.001
+value = 0.05
+ticks_on_borders = true
+
+[node name="Int kecepatan" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.5
+offset_top = 452.0
+offset_right = 38.5
+offset_bottom = 471.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("5_0ha60")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+text = "0
+"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Mode" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.5
+offset_top = 614.0
+offset_right = 74.5
+offset_bottom = 633.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("5_0ha60")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+text = "-"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Debug" type="Button" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 103.5
+offset_top = 499.0
+offset_right = 196.5
+offset_bottom = 519.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_of57s")
+text = "Debug"
+script = ExtResource("7_p1hux")
+
+[connection signal="pressed" from="CanvasLayer/Letakan Player" to="." method="set_mode_player"]
+[connection signal="pressed" from="CanvasLayer/Tambah hantu" to="." method="set_mode_ghost"]
+[connection signal="pressed" from="CanvasLayer/Hapus Hantu" to="." method="set_mode_eraser"]
+[connection signal="pressed" from="CanvasLayer/Hapus Semua" to="." method="trigger_reset"]
+[connection signal="pressed" from="CanvasLayer/Menu" to="." method="On_Menu_Presess"]
+[connection signal="value_changed" from="CanvasLayer/Speed" to="." method="set_game_speed"]

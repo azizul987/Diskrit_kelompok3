@@ -1,0 +1,518 @@
+[gd_scene load_steps=49 format=3 uid="uid://dvtpu87fyidoj"]
+
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Pacman/Fonts/upheavtt.ttf" id="1_e5g8k"]
+[ext_resource type="Script" uid="uid://bv1f2lrlpknwh" path="res://scene/layar.gd" id="1_pb5j1"]
+[ext_resource type="Texture2D" uid="uid://bh35fl0wqe63" path="res://Pacman/Pacman_01.png" id="2_15se8"]
+[ext_resource type="Texture2D" uid="uid://h71ud3s8c8n3" path="res://Pacman/Pacman_02.png" id="3_xs5te"]
+[ext_resource type="Texture2D" uid="uid://dn5n35q1uw6no" path="res://Pacman/Pacman_03.png" id="4_vi6sp"]
+[ext_resource type="Texture2D" uid="uid://bo8buajm6xgli" path="res://pacmanPack/blueGhost.png" id="5_wd6lm"]
+[ext_resource type="Texture2D" uid="uid://igteg0fwsyml" path="res://pacmanPack/redGhost.png" id="6_nuiae"]
+[ext_resource type="Texture2D" uid="uid://d4gbnsm5xdijc" path="res://pacmanPack/orangeGhost.png" id="7_pb5j1"]
+[ext_resource type="Texture2D" uid="uid://dh8rleg4hv1hv" path="res://pacmanPack/greenGhost.png" id="8_6fejx"]
+[ext_resource type="AudioStream" uid="uid://y4ml6ssnn041" path="res://Music/pacman_beginning.wav" id="9_nuiae"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qlln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_15se8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xs5te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vi6sp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akoio"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho73k"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyuxe"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8of67"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgh6j"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmmby"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp55b"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbutu"]
+atlas = ExtResource("5_wd6lm")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6i5tc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akoio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho73k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyuxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8of67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgh6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmmby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp55b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbutu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_026qx"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pci4"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o854k"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahy0u"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh37c"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0o0q"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro420"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t04dq"]
+atlas = ExtResource("6_nuiae")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sd7bm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_026qx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pci4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o854k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahy0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh37c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0o0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro420")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t04dq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b08iv"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dow5n"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cals8"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpkr8"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tucx6"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qabww"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toqhx"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74qtc"]
+atlas = ExtResource("7_pb5j1")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d0hjk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b08iv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dow5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cals8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpkr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tucx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qabww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toqhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74qtc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26vse"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyaur"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jajre"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jax0"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42sqa"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p17gy"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v31g"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpsx6"]
+atlas = ExtResource("8_6fejx")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vd4e1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26vse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyaur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jajre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jax0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42sqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p17gy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v31g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpsx6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nuiae"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.19554523, 0.19554508, 0.19554508, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+
+[node name="Menu" type="Node2D"]
+
+[node name="Layar" type="CanvasLayer" parent="."]
+script = ExtResource("1_pb5j1")
+
+[node name="Judul" type="RichTextLabel" parent="Layar"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -123.5
+offset_top = 96.0
+offset_right = 111.5
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("1_e5g8k")
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+text = "Pacman Diskrit"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Subjudul1" type="RichTextLabel" parent="Layar"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -123.5
+offset_top = 144.0
+offset_right = 124.5
+offset_bottom = 196.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("1_e5g8k")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+text = "Karakter Utama"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Karakter Utama" type="Control" parent="Layar"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1.5
+offset_right = -1.5
+grow_horizontal = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Layar/Karakter Utama"]
+position = Vector2(-97.749985, 191.93333)
+scale = Vector2(1.3666667, 1.3666667)
+sprite_frames = SubResource("SpriteFrames_1qlln")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Layar/Karakter Utama"]
+position = Vector2(-49.749985, 191.93333)
+scale = Vector2(1.3666667, 1.3666667)
+sprite_frames = SubResource("SpriteFrames_6i5tc")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Layar/Karakter Utama"]
+position = Vector2(-1.7499847, 191.93333)
+scale = Vector2(1.3666667, 1.3666667)
+sprite_frames = SubResource("SpriteFrames_sd7bm")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Layar/Karakter Utama"]
+position = Vector2(46.250015, 191.93333)
+scale = Vector2(1.3666667, 1.3666667)
+sprite_frames = SubResource("SpriteFrames_d0hjk")
+autoplay = "default"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Layar/Karakter Utama"]
+position = Vector2(94.250015, 191.93333)
+scale = Vector2(1.3666667, 1.3666667)
+sprite_frames = SubResource("SpriteFrames_vd4e1")
+autoplay = "default"
+
+[node name="Layer1" type="Control" parent="Layar"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 0.5
+offset_top = 320.0
+offset_right = 0.5
+offset_bottom = 320.0
+grow_horizontal = 2
+
+[node name="Path Fiinding" type="Button" parent="Layar/Layer1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -81.0
+offset_right = 92.5
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_e5g8k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nuiae")
+text = "Path Finding"
+metadata/_edit_use_anchors_ = true
+
+[node name="Play" type="Button" parent="Layar/Layer1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -33.0
+offset_right = 92.5
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_e5g8k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nuiae")
+text = "Main"
+metadata/_edit_use_anchors_ = true
+
+[node name="About" type="Button" parent="Layar/Layer1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = 15.0
+offset_right = 92.5
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_e5g8k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nuiae")
+text = "Tentang"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="Layar/Layer1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = 63.0
+offset_right = 92.5
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_e5g8k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nuiae")
+text = "Keluar"
+metadata/_edit_use_anchors_ = true
+
+[node name="Layer2" type="Node2D" parent="Layar"]
+visible = false
+position = Vector2(219, 230)
+
+[node name="Judul" type="RichTextLabel" parent="Layar/Layer2"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_right = 128.0
+offset_bottom = 156.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("1_e5g8k")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+text = "Arcade Asli:
+Namco (c) 1980
+
+Diremake Oleh:
+Kelompok 3
+ 2025"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="Layar/Layer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = 97.0
+offset_right = 125.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_e5g8k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nuiae")
+text = "Kembali"
+metadata/_edit_use_anchors_ = true
+
+[node name="Ready_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_nuiae")
+autoplay = true
+
+[connection signal="pressed" from="Layar/Layer1/Path Fiinding" to="Layar" method="on_Finding_press"]
+[connection signal="pressed" from="Layar/Layer1/Play" to="Layar" method="on_play_press"]
+[connection signal="pressed" from="Layar/Layer1/About" to="Layar" method="On_About_press"]
+[connection signal="pressed" from="Layar/Layer1/Quit" to="Layar" method="On_Quit_press"]
+[connection signal="pressed" from="Layar/Layer2/Back" to="Layar" method="On_Back_press"]
