@@ -1,6 +1,6 @@
 # Discrete Structures II - Final Project
 
-![Godot Engine](https://img.shields.io/badge/Godot-4.x-blue?logo=godotengine&logoColor=white)
+![Godot Engine](https://img.shields.io/badge/Godot-4.5-blue?logo=godotengine&logoColor=white)
 ![Project Status](https://img.shields.io/badge/status-finished-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -43,7 +43,7 @@ If you want to run the project from the source code:
     git clone [https://github.com/username/nama-repo-anda.git](https://github.com/username/nama-repo-anda.git)
     ```
 2.  **Open in Godot:**
-    * Launch **Godot Engine** (Ensure you have version 4.x installed).
+    * Launch **Godot Engine** (Ensure you have version 4.5 installed).
     * Click **Import** and select the `project.godot` file from the cloned folder.
     * Click **Run** (or press F5) to start the simulation.
 
