@@ -51,7 +51,7 @@ If you want to run the project from the source code:
 
 ## 🛠️ Tech Stack
 
-* **Engine:** Godot Engine 4.x
+* **Engine:** Godot Engine 4.5
 * **Language:** GDScript
 * **Course:** Struktur Diskrit II
 * **Institution:** Universitas Sriwijaya (UNSRI)
