@@ -17,7 +17,7 @@ This project re-imagines the classic **Pacman** game to demonstrate practical ap
 * 🧠 **Path Finding Visualization:** A specific mode to visualize how the algorithm scans the grid (visited nodes) and calculates the shortest path from the Ghost to Pacman in real-time.
 * 📊 **Math Proof Console:** A unique feature that outputs calculation metrics (Time Complexity & Path Distance) to the debug console for academic verification.
 * 🕹️ **Playable Game:** Fully functional Pacman mechanics with scoring, win/loss states, and smart enemies.
-* ✅ **Godot Engine Power:** Built using Godot 4.x for optimized 2D performance.
+* ✅ **Godot Engine Power:** Built using Godot 4.5 for optimized 2D performance.
 
 ---
 
