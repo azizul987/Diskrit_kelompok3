@@ -2,7 +2,7 @@
 
 ![Main Menu Screen](Menu.png)
 
-![Godot Engine](https://img.shields.io/badge/Godot-4.x-blue?logo=godotengine&logoColor=white)
+![Godot Engine](https://img.shields.io/badge/Godot-4.5-blue?logo=godotengine&logoColor=white)
 ![Algorithm](https://img.shields.io/badge/Algorithm-BFS-orange)
 ![Subject](https://img.shields.io/badge/Course-Discrete_Structures_II-red)
 ![Status](https://img.shields.io/badge/Status-Finished-success)
@@ -132,7 +132,7 @@ https://www.mediafire.com/file/c8eozem2og2nt46/Pacman.zip/file
     git clone https://github.com/username/repo-name.git
     ```
 2. **Open in Godot:**
-    - Launch **Godot Engine 4.x**
+    - Launch **Godot Engine 4.5**
     - Click **Import** and select the `project.godot` file  
     - Press **F5** to run
 
