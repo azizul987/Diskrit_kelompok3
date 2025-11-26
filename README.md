@@ -34,7 +34,7 @@ This project re-imagines the classic **Pacman** game to demonstrate practical ap
 
 ## 🧠 Algorithm & Logic
 
-The core of this project is the **Breadth-First Search (BFS)** implementation found in `Ghost.gd`. This algorithm ensures that the Ghost always finds the optimal path to the player.
+The core of this project is the **Breadth-First Search (BFS)** implementation found in `ghost_test.gd`. This algorithm ensures that the Ghost always finds the optimal path to the player.
 
 ### 1. BFS Implementation (GDScript)
 
@@ -145,5 +145,7 @@ See `LICENSE` for more information.
 
 ---
 
-**Informatics Engineering - Semester 3**  
+**Informatics Engineering - Semester 3-Class L3-Group 3-2025** 
+**Final Project**
+**Discrete Structures II** 
 **Universitas Sriwijaya (UNSRI)**
