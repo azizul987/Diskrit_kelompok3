@@ -128,7 +128,8 @@ https://www.mediafire.com/file/c8eozem2og2nt46/Pacman.zip/file
 ### 🌐Web Version
 You can play direcly through the web browser by clicking the link below:
 
-👉 **Replit:**  
+👉 **Github:**  
+https://azizul987.github.io/Diskrit_kelompok3/
 
 
 ### 🛠️ How to Run (Source Code)
