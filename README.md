@@ -117,13 +117,19 @@ To satisfy the course requirements, the game outputs a diagnostic report every t
 ---
 
 ## 📥 Download & Installation
-
+### 🪟Window
 You can download the latest executable build for Windows from the link below:
 
-### 🚀 **DOWNLOAD PACMAN DISKRIT v1.0**
+#### 🚀 **DOWNLOAD PACMAN DISKRIT v1.0**
 
 👉 **Mediafire:**  
 https://www.mediafire.com/file/c8eozem2og2nt46/Pacman.zip/file
+
+##🌐Web Version
+You can play direcly through the web browser by clicking the link below:
+
+👉 **Replit:**  
+
 
 ### 🛠️ How to Run (Source Code)
 
